@@ -1,0 +1,12 @@
+<div ng-controller="countryController">
+  <div class=' row ' >
+      <div class="card " style="width: 20rem;" ng-repeat="items in articles">
+          <img ng-src={{items.urlToImage}} class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{items.title}}</h5>
+              <p class="card-text">{{items.description}}</p>
+              <a href="{{items.url}}" target="_blank" class="btn btn-dark btn-sm">Know More</a>
+          </div>
+      </div>
+  </div>
+</div>

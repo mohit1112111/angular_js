@@ -1,0 +1,66 @@
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("https://t3.ftcdn.net/jpg/05/37/41/80/360_F_537418049_cZVRGKupGUcfEwyexmMtRQMJEmi4mz2B.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .div {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        text-decoration: none;
+        color: #fff;
+        background-color: #337ab7;
+        padding: 7px 15px;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #23527c;
+    }
+
+    p {
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .div {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+    }
+    pre{
+        font-size: 16px;
+    }
+</style>
+
+
+    <div class="container" ng-controller="landingController">
+        <div class="div">
+            <h1>Welcome to News-Monkey</h1>
+            <p>Discover a world of endless possibilities with our revolutionary new app. 
+                Seamlessly connect, engage, and explore like never before. Unleash your creativity, stay informed, and make every moment extraordinary. 
+                Join the innovation revolution and experience a whole new level of excitement. Welcome to the future of app technology.</p>
+            <p>Don't have account? Please <button ng-click="getSingup()">Sign Up, Please</button></p>
+            <p>Already registered? Please <button ng-click="getLogin()">Log In, Please</button></p>
+        </div>
+    </div>

@@ -1,0 +1,132 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+   
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+    
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: black;
+    background-color:white;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.toggle-menu {
+    display: none;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .menu {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #555;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .menu.show li {
+        margin: 10px 0;
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    /* width: 30%; */
+}
+
+.card-image {
+    width: 30%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-body {
+    padding: 10px;
+}
+footer {
+    background-color:#333;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+    color:white;
+  }
+  
+  footer a {
+    color:white;
+  }
+  .main{
+    width: auto;
+    height: 500px;
+    background-image: url("https://wallpapers.com/images/hd/hd-vacation-house-in-the-beach-j4jasqgcc5ismew8.jpg");
+    background-size: cover;
+
+
+  }

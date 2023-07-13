@@ -1,0 +1,101 @@
+
+<style>
+    .card-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+    .card-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+    li{
+        list-style: none;
+    }
+    button {
+        text-decoration: none;
+        color:black;
+        background-color:rgb(68, 68, 167);
+        padding: 6px 15px;
+        border-radius: 5px;
+        margin-left: 0;
+    }
+    button:hover {
+        
+        color:black;
+        background-color: rgb(201, 58, 58);
+       
+    }
+</style>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="#/home">News-Monkey</a>
+        </div>
+        <ul class="menu" ng-class="{ 'show': isMenuOpen }">
+
+            <li><a ng-href="#/home">Home</a></li>
+            <li><a ng-href="#/category/sports">Sports</a></li>
+            <li><a ng-href="#/category/business">Business</a></li>
+            <li><a ng-href="#/category/technology">Technology</a></li>
+            <li><a ng-href="#/category/health">Health</a></li>
+            <li><a ng-href="#/category/entertainment">Entertainment</a></li>
+            <li><a ng-href="#/category/general">General</a></li>
+            <li><a ng-href="#/category/science">Science</a></li>
+        </ul>
+      
+
+        
+        <button class="toggle-menu" ng-click="toggleMenu()">Menu</button>
+        <ul class="menu" ng-class="{ 'show': isMenuOpen }">
+            <li><a ng-href="#/"><button>Logout</button></a></li>
+        
+    </nav>
+</header>
+<div class="searchBar" style=" width: 50%;margin: 30px auto;" ng-controller="countryController">
+    <form class="d-flex" role="search" ng-submit="getNews()">
+        <input class="form-control me-2" type="search" placeholder="Search By Country" aria-label="Search"
+            ng-model="countryName">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
+<div>
+
+    <h2 class='text-center my-4 ' style="color: white;">NewsMonkey - Top Headlines</h2>
+</div>
+<div>
+    <div class=' row ' >
+        <div class="card " style="width: 20rem;" ng-repeat="items in articles">
+            <img ng-src={{items.urlToImage}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{items.title}}</h5>
+                <p class="card-text">{{items.description}}</p>
+                <a href="{{items.url}}" target="_blank" class="btn btn-dark btn-sm">Know More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <footer>
+        <div class="container">
+            <div class="row m-auto" >
+                <div class="col-xs-12 col-sm-6">
+                    <p>&copy; {{ currentYear }} NewsApp. All rights reserved.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p class="text-right">Powered by <a href="https://newsapi.org/" target="_blank">NewsAPI</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</div>
